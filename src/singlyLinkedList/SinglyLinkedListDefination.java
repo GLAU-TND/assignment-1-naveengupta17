@@ -50,7 +50,7 @@ public class SinglyLinkedListDefination<E> implements LinkedListADT<E> {
 
     @Override
     public void add(E item) {
-
+        add(size,item);
     }
 
     @Override
