@@ -11,5 +11,12 @@ public class Person {
     public Person() {
     }
 
+    public Person(String firstName, String lastName, String email, ArrayList<Long> numberList) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.numberList = numberList;
+    }
+
 
 }
