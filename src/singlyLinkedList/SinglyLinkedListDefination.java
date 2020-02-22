@@ -60,11 +60,19 @@ public class SinglyLinkedListDefination<E> implements LinkedListADT<E> {
 
         }
         head = head.next;
-        /*E response = head.data;*/
         size --;
         return item;
 
     }
+    private E removeAfter(E item){
+        int index = search(item);
+        Node<E> newNode = getNode(index-1);
+        Node<E> nextNode = getNode(index);
+        newNode.next = nextNode.next;
+        size --;
+        return item;
+    }
+
 
     @Override
     public E remove(E item) {
