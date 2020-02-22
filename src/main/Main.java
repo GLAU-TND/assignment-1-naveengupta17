@@ -60,6 +60,15 @@ public class Main {
                 case 2:
                     linkesList.print();
                     break;
+                case 3: {
+                    System.out.println("You could search for a contact from their first Name:");
+                    String firstName = scanner.nextLine().trim();
+                    searchMethod.search(firstName, linkesList.returnLinkedList());
+                    break;
+
+
+                }
+
             }
 
 
