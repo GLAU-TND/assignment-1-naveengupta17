@@ -2,6 +2,8 @@ package singlyLinkedList;
 
 import ADT.LinkedListADT;
 
+import java.util.NoSuchElementException;
+
 public class SinglyLinkedListDefination<E> implements LinkedListADT<E> {
     private Node<E> head =null;
     private  int size =0;
@@ -51,6 +53,17 @@ public class SinglyLinkedListDefination<E> implements LinkedListADT<E> {
     @Override
     public void add(E item) {
         add(size,item);
+    }
+    private E removeFirst(E item){
+        if(head == null){
+            throw new NoSuchElementException("Khali h be");
+
+        }
+        head = head.next;
+        /*E response = head.data;*/
+        size --;
+        return item;
+
     }
 
     @Override
