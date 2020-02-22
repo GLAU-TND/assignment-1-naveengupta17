@@ -50,5 +50,17 @@ public class Person {
         this.numberList = numberList;
     }
 
+    private StringBuilder printContact() {
+        StringBuilder stringBuilder = new StringBuilder();
+        int k = 0;
+        for (long i : numberList) {
+            stringBuilder.append(i);
+            k++;
+            stringBuilder.append((k < numberList.size()) ? "," : "");
+
+        }
+        return stringBuilder;
+    }
+
 
 }
