@@ -88,6 +88,9 @@ public class Main {
                     linkesList.removeByIndex(choice99 - 1);
                     break;
                 }
+                case 5:
+                    flag = 0;
+                    break;
 
 
             }
