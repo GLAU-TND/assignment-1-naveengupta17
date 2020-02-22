@@ -62,5 +62,15 @@ public class Person {
         return stringBuilder;
     }
 
+    @Override
+    public String toString() {
+        return "-------- * -------- * -------- * --------" + "\n" +
+                "First Name: " + firstName + "\n" +
+                "Last Name: " + lastName + "\n" +
+                (numberList.size() == 1 ? "Contact Number: " : "Contact Number(s): ") + printContact() + "\n" +
+                "Email address: " + email + "\n" +
+                "-------- * -------- * -------- * --------" + "\n";
+    }
+
 
 }
