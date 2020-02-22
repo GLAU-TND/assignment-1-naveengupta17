@@ -72,6 +72,19 @@ public class SinglyLinkedListDefination<E> implements LinkedListADT<E> {
         size --;
         return item;
     }
+    public void removeByIndex(int index){
+        if(index < 0 || index > size ){
+            throw new IndexOutOfBoundsException("please entre valid index");
+        }
+        if(index == 0){
+            removeFirst(getNode(index).data);
+        }
+        else {
+            removeAfter(getNode(index).data);
+        }
+    }
+
+
 
 
     @Override
