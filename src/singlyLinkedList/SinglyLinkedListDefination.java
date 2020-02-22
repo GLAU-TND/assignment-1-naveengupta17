@@ -126,6 +126,12 @@ public class SinglyLinkedListDefination<E> implements LinkedListADT<E> {
 
     @Override
     public void print() {
+        System.out.println("---Here are all your Contacts---");
+        for (int i = 0; i < size; i++) {
+            E data = this.getNode(i).getData();
+            System.out.print(data);
+
+        }
 
     }
     private static class Node<E> {
