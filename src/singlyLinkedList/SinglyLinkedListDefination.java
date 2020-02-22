@@ -2,6 +2,7 @@ package singlyLinkedList;
 
 import ADT.LinkedListADT;
 
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 public class SinglyLinkedListDefination<E> implements LinkedListADT<E> {
@@ -85,9 +86,6 @@ public class SinglyLinkedListDefination<E> implements LinkedListADT<E> {
     }
 
 
-
-
-
     @Override
     public E remove(E item) {
         int index = search(item);
@@ -97,6 +95,15 @@ public class SinglyLinkedListDefination<E> implements LinkedListADT<E> {
             removeAfter(item);
         }
         return item;
+    }
+
+    public ArrayList<E> returnLinkedList() {
+        ArrayList<E> arrayList = new ArrayList<>();
+        for (int i = 0; i < size; i++) {
+            arrayList.add(getNode(i).data);
+        }
+        return arrayList;
+
     }
 
     @Override
