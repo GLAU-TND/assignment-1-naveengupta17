@@ -91,8 +91,8 @@ public class Main {
                 case 5:
                     flag = 0;
                     break;
-
-
+                default:
+                    System.out.println("Please choose valid option:");
             }
 
 
