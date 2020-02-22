@@ -68,6 +68,27 @@ public class Main {
 
 
                 }
+                case 4: {
+                    int k = 1;
+                    int limit = 0;
+                    for (Person person : linkesList.returnLinkedList()) {
+                        System.out.println(k + "- " + person.getFirstName() + " " + person.getLastName());
+                        k++;
+
+                    }
+                    System.out.println("Press the number against contact to delete it:");
+                    int choice99 = scanner.nextInt();
+                    for (Person person : linkesList.returnLinkedList()) {
+                        if (limit == choice99 - 1) {
+                            System.out.println(person.getFirstName() + " " + person.getLastName() + "'s" + " contact deleted from list ");
+                            break;
+                        }
+                        limit++;
+                    }
+                    linkesList.removeByIndex(choice99 - 1);
+                    break;
+                }
+
 
             }
 
