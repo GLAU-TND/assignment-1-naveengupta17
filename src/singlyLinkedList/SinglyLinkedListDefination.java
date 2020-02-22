@@ -108,7 +108,15 @@ public class SinglyLinkedListDefination<E> implements LinkedListADT<E> {
 
     @Override
     public int search(E item) {
-        return 0;
+        int res = 0;
+        for (int i = 0; i < size; i++) {
+            if (getNode(i).data == item) {
+                res = i;
+                break;
+
+            }
+        }
+        return res;
     }
 
     @Override
