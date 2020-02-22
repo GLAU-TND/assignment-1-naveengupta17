@@ -26,6 +26,13 @@ public class SinglyLinkedListDefination<E> implements LinkedListADT<E> {
         size++;
 
     }
+    private void addAfter(Node<E> node, E item) {
+        node.next = new Node<E>(item,node.getNext());
+        size++;
+
+    }
+
+
 
 
 
