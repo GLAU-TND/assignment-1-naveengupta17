@@ -18,5 +18,21 @@ public class Person {
         this.numberList = numberList;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public ArrayList<Long> getNumberList() {
+        return numberList;
+    }
+
 
 }
