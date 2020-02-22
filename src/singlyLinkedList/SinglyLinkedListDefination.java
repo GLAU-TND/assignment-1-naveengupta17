@@ -87,9 +87,16 @@ public class SinglyLinkedListDefination<E> implements LinkedListADT<E> {
 
 
 
+
     @Override
     public E remove(E item) {
-        return null;
+        int index = search(item);
+        if (index == 0) {
+            removeFirst(item);
+        } else {
+            removeAfter(item);
+        }
+        return item;
     }
 
     @Override
