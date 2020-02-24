@@ -1,6 +1,7 @@
 package personDefination;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Person {
     ArrayList<Long> numberList = new ArrayList<>();
@@ -60,6 +61,19 @@ public class Person {
 
         }
         return stringBuilder;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return firstName.compareTo(person.firstName) >= 1;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numberList, firstName, lastName, email);
     }
 
     @Override

@@ -54,6 +54,7 @@ public class Main {
                     Person person = new Person(fName, lName, email, arrayList);
 
                     linkesList.add(person);
+                    linkesList.sort();
                     break;
 
                 }
