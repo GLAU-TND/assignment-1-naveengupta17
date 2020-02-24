@@ -121,6 +121,25 @@ public class SinglyLinkedListDefination<E> implements LinkedListADT<E> {
 
     @Override
     public void sort() {
+        Node current = head, index = null;
+        E temp;
+        if (head == null) {
+            return;
+        } else {
+            while (current != null) {
+                index = current.next;
+                while (index != null) {
+                    if ((current.data).equals(index.data)) {
+                        temp = (E) current.data;
+                        current.data = index.data;
+                        index.data = temp;
+                    }
+                    index = index.next;
+                }
+                current = current.next;
+            }
+
+        }
 
     }
 
